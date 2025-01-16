@@ -177,7 +177,7 @@
   appearance: none;
   border: none;
   background: none;
-  background-image: url("./src/assets/pictures/arrow.svg");
+  background-image: url("../assets/pictures/arrow.svg");
   background-repeat: no-repeat;
   background-position: right center;
   color: var(--secondary-color-white);
@@ -222,21 +222,21 @@
 .footer__social-link:nth-of-type(1) {
   width: 9px;
   height: 16.68px;
-  background-image: url("./src/assets/pictures/_x30_1._Facebook-white.svg");
+  background-image: url("../assets/pictures/_x30_1._Facebook-white.svg");
   background-size: cover;
 }
 
 .footer__social-link:nth-of-type(2) {
   width: 17px;
   height: 13.81px;
-  background-image: url("./src/assets/pictures/Twitter-white.svg");
+  background-image: url("../assets/pictures/Twitter-white.svg");
   background-size: cover;
 }
 
 .footer__social-link:nth-of-type(3) {
   width: 15px;
   height: 15px;
-  background-image: url("./src/assets/pictures/Linkedin-white.svg");
+  background-image: url("../assets/pictures/Linkedin-white.svg");
   background-size: cover;
 }
 
