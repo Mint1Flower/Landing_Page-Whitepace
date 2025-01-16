@@ -1,5 +1,5 @@
-@import url(/src/css/fonts.css);
-@import url(/src/css/variables.css);
+@import url(./src/css/fonts.css);
+@import url(./src/css/variables.css);
 hmtl {
   font-size: 100%;
 }
