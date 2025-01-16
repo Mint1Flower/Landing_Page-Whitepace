@@ -177,7 +177,7 @@
   appearance: none;
   border: none;
   background: none;
-  background-image: url(/src/assets/pictures/arrow.svg);
+  background-image: url(./src/assets/pictures/arrow.svg);
   background-repeat: no-repeat;
   background-position: right center;
   color: var(--secondary-color-white);
