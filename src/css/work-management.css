@@ -1,5 +1,5 @@
-@import url(./src/css/fonts.css);
-@import url(./src/css/variables.css);
+@import url("./src/css/fonts.css");
+@import url("./src/css/variables.css");
 .work-management-section {
   background: var(--secondary-color-white);
   padding: 140px 0;
