@@ -119,7 +119,7 @@ hmtl {
   .hero__bg {
     top: 240px;
     height: 375px;
-    background: url(/src/assets/pictures/bg-1152.svg);
+    background: url("../assets/pictures/bg-1152.svg");
   }
   .hero__container-img {
     width: calc(551px + (100vw - 768px) / (1152 - 768) * (526 - 551));
