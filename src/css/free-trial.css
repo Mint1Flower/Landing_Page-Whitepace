@@ -1,5 +1,5 @@
-@import url(/src/css/fonts.css);
-@import url(/src/css/variables.css);
+@import url(./src/css/fonts.css);
+@import url(./src/css/variables.css);
 .free-trial {
   background: var(--primary-color-dark-blue);
   padding: 140px 0 32px 0;
