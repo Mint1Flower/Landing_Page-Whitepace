@@ -1,5 +1,5 @@
-@import url(/src/css/fonts.css);
-@import url(/src/css/variables.css);
+@import url(./src/css/fonts.css);
+@import url(./src/css/variables.css);
 .your-work-section {
   background: var(--primary-color-dark-blue);
   padding: 140px 0;
