@@ -1,0 +1,179 @@
+@import url(/src/css/fonts.css);
+@import url(/src/css/variables.css);
+
+
+
+// mixin for adaptive font-size
+@mixin calc-font-size($min-vw, $max-vw, $min-font-size, $max-font-size){
+    font-size: calc(#{$min-font-size}rem + ((100vw - #{$min-vw}rem) / (#{$max-vw} - #{$min-vw})) * (#{$max-font-size} - #{$min-font-size}));
+}
+
+//mixin for adaptive block width 
+@mixin calc-block-width($min-vw, $max-vw, $min-block-width, $max-block-width){
+    width: calc(#{$min-block-width}px + ((100vw - #{$min-vw}px) / (#{$max-vw} - #{$min-vw})) * (#{$max-block-width} - #{$min-block-width}));
+}
+
+//mixin for adaptive row margin
+@mixin calc-margin-row($min-vw, $max-vw, $min-margin-row, $max-margin-row){
+    margin: 0 calc(#{$min-margin-row}px + ((100vw - #{$min-vw}px) / (#{$max-vw} - #{$min-vw})) * (#{$max-margin-row} - #{$min-margin-row}));
+}
+
+
+.use-extension-section {
+    background-color: var(--primary-color-dark-blue);
+    padding: 140px 0;
+}
+
+.use-extension-section__container {
+    width: auto;
+    height: fit-content;
+    @include calc-margin-row(1440, 1920, 32, 220);    
+}
+
+.use-extension-section__content {
+    width: 100%;
+    display: flex;
+    gap: 98px;
+}
+
+.use-extension-section__heading {
+    align-self: center;
+    width: 697px;
+    height: fit-content;
+}
+
+.use-extension-section__heading h2 {
+    width: 100%;
+    color: var(--secondary-color-white);
+    font-family: Inter;
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 87px;
+    letter-spacing: -0.16px;
+    margin-bottom: 24px;
+}
+
+.use-extension-section__heading p {
+    width: 100%;
+    color: var(--secondary-color-white);
+    font-family: Inter;
+    font-size: var(--primary-font-size-small-text);
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: -0.16px;
+    margin-bottom: 60px;
+}
+
+.use-extension-section__btn {
+    width: 171px;
+    height: 63px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--primary-color-blue);
+}
+
+.use-extension-section__btn span {
+    color: var(--secondary-color-white);
+    font-family: Inter;
+    font-size: var(--primary-font-size-small-text);
+    font-weight: 500;
+    line-height: 23px;
+    letter-spacing: -0.16px;
+    margin-right: 10px;
+}
+
+.use-extension-section__container-img {
+    background-color: var(--secondary-color-turquoise);
+    width: 686px;
+    height: 479px;
+}
+
+.use-extension-section__container-img img {
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width: 1440px) {
+    .use-extension-section__container {
+        margin: 0 32px;
+    }
+    .use-extension-section__heading {
+        width: 592px;
+    }
+}
+
+@media screen and (max-width: 1152px) {
+    .use-extension-section__heading {
+        width: 528px;
+    }
+    .use-extension-section__heading h2 {
+        @include calc-font-size(48, 72, 3.375, 4);
+        line-height: 77px;
+    }
+    .use-extension-section__container-img {
+        width: 459px;
+        height: 320.5px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .use-extension-section {
+        padding: 100px 0;
+    }
+    .use-extension-section__container {
+        @include calc-margin-row(320, 768, 16, 32);
+    }
+    .use-extension-section__content {
+        flex-direction: column;
+        gap: 60px;
+    }
+    .use-extension-section__heading {
+        width: 100%;        
+    }
+    .use-extension-section__heading h2 {
+        @include calc-font-size(20, 48, 2.25, 3.375);
+        text-align: center;
+        line-height: 65px;
+    }
+    .use-extension-section__heading p {
+        text-align: center;
+    }
+    .use-extension-section__btn {
+        margin: 0 auto;
+    }
+    .use-extension-section__btn span {
+        font-size: 16px;
+    }
+    .use-extension-section__container-img {
+        @include calc-block-width(320, 768, 284.5, 557);
+        height: 388.93px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .use-extension-section {
+        padding: 80px 0;
+    }
+
+    .use-extension-section__container {
+        margin: 0 16px;
+    }
+
+    .use-extension-section__content {
+        gap: 60px;
+    }
+
+    .use-extension-section__heading h2 {
+        width: 97%;
+        line-height: 44px;
+        margin: 0 auto 24px auto;
+    }
+
+    .use-extension-section__btn span {
+        font-size: 18px;
+    }
+}

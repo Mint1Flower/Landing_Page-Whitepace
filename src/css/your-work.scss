@@ -1,0 +1,162 @@
+@import url(/src/css/fonts.css);
+@import url(/src/css/variables.css);
+
+
+// mixin for adaptive font-size
+@mixin calc-font-size($min-vw, $max-vw, $min-font-size, $max-font-size){
+    font-size: calc(#{$min-font-size}rem + ((100vw - #{$min-vw}rem) / (#{$max-vw} - #{$min-vw})) * (#{$max-font-size} - #{$min-font-size}));
+}
+
+//mixin for adaptive block width 
+@mixin calc-block-width($min-vw, $max-vw, $min-block-width, $max-block-width){
+    width: calc(#{$min-block-width}px + ((100vw - #{$min-vw}px) / (#{$max-vw} - #{$min-vw})) * (#{$max-block-width} - #{$min-block-width}));
+}
+
+//mixin for adaptive row margin
+@mixin calc-margin-row($min-vw, $max-vw, $min-margin-row, $max-margin-row){
+    margin: 0 calc(#{$min-margin-row}px + ((100vw - #{$min-vw}px) / (#{$max-vw} - #{$min-vw})) * (#{$max-margin-row} - #{$min-margin-row}));
+}
+
+//mixin for adaptive right margin
+@mixin calc-margin-right($min-vw, $max-vw, $min-margin-right, $max-margin-right){
+    margin: 0 calc(#{$min-margin-right}px + ((100vw - #{$min-vw}px) / (#{$max-vw} - #{$min-vw})) * (#{$max-margin-right} - #{$min-margin-right}));
+}
+
+
+.your-work-section {
+    background: var(--primary-color-dark-blue);
+    padding: 140px 0;
+}
+
+.your-work__container {
+    width: auto;
+    height: fit-content;
+    @include calc-margin-row(1440, 1920, 32, 220);
+}
+
+.your-work__content {
+    width: 100%;
+    height: fit-content;
+}
+
+.your-work__text-block {
+    margin: 0 208.5px;
+}                                                                                                                             
+
+.your-work__content h2 {
+    color: var(--secondary-color-white);
+    font-family: Inter;
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 87px;
+    letter-spacing: -0.16px;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.your-work__content p {
+    color: var(--secondary-color-white);
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: -0.16px;
+    text-align: center;
+    margin: 0 auto 60px auto;
+}
+
+.your-work__btn {
+    width: 195px;
+    height: 63px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--primary-color-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.your-work__btn:span {
+    color: lightgrey;
+}
+
+.your-work__btn span {
+    color: var(--secondary-color-white);
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 23px;
+    letter-spacing: -0.16px;
+    margin-right: 10px;
+}
+
+@media screen and (max-width: 1440px) {
+    
+
+    .your-work__container {
+        margin: 0 32px;
+    }
+
+    .your-work__text-block {
+        margin: 0 156px;
+    }
+
+    .your-work__text-block h2 {
+        
+    }
+}
+
+@media screen and (max-width: 1152px) {
+    .your-work__container {
+        @include calc-margin-row(768, 1152, 144, 470);
+        margin-left: 32px;
+    }
+
+    .your-work__text-block {
+        margin: 0;
+    }
+
+    .your-work__text-block h2 {
+        font-size: 64px;
+        text-align: left;
+    }
+
+    .your-work__btn {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    
+
+    .your-work__container {
+        margin: 0 144px 0 20px;
+    }
+
+    .your-work__text-block h2 {
+        @include calc-font-size(320, 480, 36, 54);
+    }
+
+    .your-work__text-block p {
+        text-align: left;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+    .your-work__container {
+        margin: 0 16px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .your-work-section {
+        padding: 100px 0;
+    }
+
+    .your-work__text-block h2 {
+        font-size: 36px;
+        line-height: 44px;
+    }
+}

@@ -1,0 +1,190 @@
+@import url(/src/css/fonts.css);
+@import url(/src/css/variables.css);
+.your-needs-section {
+  background-color: var(--secondary-color-white);
+  padding: 140px 0;
+}
+
+.your-needs-section__container {
+  width: auto;
+  margin: 0 calc(32px + (100vw - 1440px) / (1920 - 1440) * (220 - 32));
+}
+
+.your-needs-section__content {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  gap: 98px;
+}
+
+.your-needs-section__container-img {
+  width: calc(670px + (100vw - 1440px) / (1920 - 1440) * (714 - 670));
+  height: 532.09px;
+  background-color: var(--secondary-color-turquoise);
+}
+
+.your-needs-section__container-img img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.your-needs-section__heading {
+  width: calc(646px + (100vw - 1440px) / (1920 - 1440) * (669 - 646));
+  height: fit-content;
+}
+
+.your-needs-section__heading h2 {
+  width: 100%;
+  color: var(--secondary-color-black);
+  font-family: Inter;
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 87px;
+  letter-spacing: -0.16px;
+  margin-bottom: 24px;
+}
+
+.your-needs-section__heading p {
+  width: 100%;
+  color: var(--secondary-color-black);
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: -0.16px;
+  margin-bottom: 60px;
+}
+
+.your-needs-section__btn {
+  width: 171px;
+  height: 63px;
+  background: var(--primary-color-blue);
+  border-radius: 8px;
+  border: none;
+}
+
+.your-needs-section__btn span {
+  color: var(--secondary-color-white);
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 23px;
+  letter-spacing: -0.16px;
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 1440px) {
+  .your-needs-section__container {
+    margin: 0 32px;
+  }
+  .your-needs-section__content {
+    gap: 60px;
+  }
+  .your-needs-section__container-img {
+    width: calc(534px + (100vw - 1152px) / (1440 - 1152) * (670 - 534));
+  }
+  .your-needs-section__heading {
+    width: calc(494px + (100vw - 1152px) / (1440 - 1152) * (646 - 494));
+  }
+  .your-needs-section__heading h2 {
+    font-size: calc(4rem + (100vw - 72rem) / (90 - 72) * (4.5 - 4));
+  }
+  .your-needs-section__btn {
+    width: 164px;
+    height: 59px;
+  }
+  .your-needs-section__btn span {
+    font-size: 16px;
+    line-height: 19px;
+  }
+}
+@media screen and (max-width: 1152px) {
+  .your-needs-section__container {
+    margin: 0 calc(20px + (100vw - 768px) / (1152 - 768) * (32 - 20));
+  }
+  .your-needs-section__container-img {
+    width: calc(0px + (100vw - 769px) / (1152 - 769) * (534 - 0));
+    height: 397.95px;
+  }
+  .your-needs-section__heading {
+    width: calc(0px + (100vw - 769px) / (1152 - 769) * (494 - 0));
+  }
+  .your-needs-section__heading h2 {
+    font-size: calc(3.375rem + (100vw - 48rem) / (72 - 48) * (4 - 3.375));
+  }
+  .your-needs-section__btn {
+    width: 176px;
+    height: 63px;
+    border-radius: 6px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .your-needs-section__content {
+    flex-direction: column;
+  }
+  .your-needs-section__container-img {
+    width: 534px;
+    height: 397px;
+    margin: 0 auto;
+  }
+  .your-needs-section__heading {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .your-needs-section__heading h2 {
+    text-align: center;
+  }
+  .your-needs-section__heading p {
+    text-align: center;
+  }
+  .your-needs-section__btn {
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 768px) {
+  .your-needs-section__container {
+    margin: 0 calc(16px + (100vw - 320px) / (768 - 320) * (20 - 16));
+  }
+  .your-needs-section__content {
+    width: 100%;
+  }
+  .your-needs-section__container-img {
+    width: auto;
+    margin: 0 calc(16px + (100vw - 320px) / (768 - 320) * (97 - 16));
+  }
+  .your-needs-section__heading {
+    width: 100%;
+    text-align: center;
+  }
+  .your-needs-section__heading h2 {
+    font-size: calc(2.5rem + (100vw - 20rem) / (48 - 20) * (3.375 - 2.5));
+  }
+  .your-needs-section__btn {
+    width: 176px;
+    height: 63px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .your-needs-section {
+    padding: 100px 0;
+  }
+  .your-needs-section__container-img {
+    width: 100%;
+    height: 214.62px;
+    margin: 0;
+  }
+  .your-needs-section__heading h2 {
+    line-height: 52px;
+  }
+  .your-needs-section__heading p {
+    line-height: 23px;
+  }
+  .your-needs-section__btn {
+    width: 168px;
+    height: 60px;
+  }
+}
+
+/*# sourceMappingURL=your-needs.css.map */

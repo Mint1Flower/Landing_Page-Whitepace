@@ -1,0 +1,121 @@
+@import url(/src/css/fonts.css);
+@import url(/src/css/variables.css);
+.your-work-section {
+  background: var(--primary-color-dark-blue);
+  padding: 140px 0;
+}
+
+.your-work__container {
+  width: auto;
+  height: fit-content;
+  margin: 0 calc(32px + (100vw - 1440px) / (1920 - 1440) * (220 - 32));
+}
+
+.your-work__content {
+  width: 100%;
+  height: fit-content;
+}
+
+.your-work__text-block {
+  margin: 0 208.5px;
+}
+
+.your-work__content h2 {
+  color: var(--secondary-color-white);
+  font-family: Inter;
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 87px;
+  letter-spacing: -0.16px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.your-work__content p {
+  color: var(--secondary-color-white);
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: -0.16px;
+  text-align: center;
+  margin: 0 auto 60px auto;
+}
+
+.your-work__btn {
+  width: 195px;
+  height: 63px;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--primary-color-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.your-work__btn:span {
+  color: lightgrey;
+}
+
+.your-work__btn span {
+  color: var(--secondary-color-white);
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 23px;
+  letter-spacing: -0.16px;
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 1440px) {
+  .your-work__container {
+    margin: 0 32px;
+  }
+  .your-work__text-block {
+    margin: 0 156px;
+  }
+}
+@media screen and (max-width: 1152px) {
+  .your-work__container {
+    margin: 0 calc(144px + (100vw - 768px) / (1152 - 768) * (470 - 144));
+    margin-left: 32px;
+  }
+  .your-work__text-block {
+    margin: 0;
+  }
+  .your-work__text-block h2 {
+    font-size: 64px;
+    text-align: left;
+  }
+  .your-work__btn {
+    margin: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .your-work__container {
+    margin: 0 144px 0 20px;
+  }
+  .your-work__text-block h2 {
+    font-size: calc(36rem + (100vw - 320rem) / (480 - 320) * (54 - 36));
+  }
+  .your-work__text-block p {
+    text-align: left;
+  }
+}
+@media screen and (max-width: 480px) {
+  .your-work__container {
+    margin: 0 16px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .your-work-section {
+    padding: 100px 0;
+  }
+  .your-work__text-block h2 {
+    font-size: 36px;
+    line-height: 44px;
+  }
+}
+
+/*# sourceMappingURL=your-work.css.map */

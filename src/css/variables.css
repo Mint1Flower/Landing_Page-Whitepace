@@ -1,0 +1,12 @@
+:root {
+    --primary-color-dark-blue: #043873;
+    --primary-color-blue: #4F9CF9;
+    --secondary-color-yellow: #FFE492;
+    --secondary-color-blue-light: #A7CEFC;
+    --secondary-color-turquoise: rgb(196, 222, 253);
+    --secondary-color-white: rgb(255, 255, 255);
+    --secondary-color-black: #212529;
+
+    --border: none;
+    --primary-font-size-small-text: 18px;
+}

@@ -1,0 +1,215 @@
+@import url(/src/css/fonts.css);
+@import url(/src/css/variables.css);
+
+
+// mixin for adaptive font-size
+@mixin calc-font-size($min-vw, $max-vw, $min-font-size, $max-font-size){
+    font-size: calc(#{$min-font-size}rem + ((100vw - #{$min-vw}rem) / (#{$max-vw} - #{$min-vw})) * (#{$max-font-size} - #{$min-font-size}));
+}
+
+//mixin for adaptive block width 
+@mixin calc-block-width($min-vw, $max-vw, $min-block-width, $max-block-width){
+    width: calc(#{$min-block-width}px + ((100vw - #{$min-vw}px) / (#{$max-vw} - #{$min-vw})) * (#{$max-block-width} - #{$min-block-width}));
+}
+
+//mixin for adaptive row margin
+@mixin calc-margin-row($min-vw, $max-vw, $min-margin-row, $max-margin-row){
+    margin: 0 calc(#{$min-margin-row}px + ((100vw - #{$min-vw}px) / (#{$max-vw} - #{$min-vw})) * (#{$max-margin-row} - #{$min-margin-row}));
+}
+
+.free-trial {
+    background: var(--primary-color-dark-blue);
+    padding: 140px 0 32px 0;
+}
+
+.free-trial__container {
+    width: auto;
+    height: fit-content;
+    @include calc-margin-row(1440, 1920, 32, 220);
+    display: flex;
+    justify-content: center;
+}
+
+.free-trial__content {
+    max-width: 608px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.free-trial__text-block {
+    width: 100%;
+    height: fit-content;
+}
+
+.free-trial__text-block h2 {
+    width: 100%;
+    color: var(--secondary-color-white);
+    font-family: Inter;
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 87px;
+    letter-spacing: -1.44px;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.free-trial__text-block p {
+    width: auto;
+    color: var(--secondary-color-white);
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: -0.48px;
+    text-align: center;
+    margin: 0 29px;
+}
+
+.free-trial__btn {
+    width: 219px;
+    height: 59px;
+    border: none;
+    border-radius: 10px;
+    background: var(--primary-color-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.free-trial__btn span {
+    color: var(--secondary-color-white);
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    letter-spacing: -0.32px;
+    text-align: left;
+}
+
+.free-trial__link-contact-sales {
+    color: var(--secondary-color-white);
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: -0.48px;
+    margin: 0 auto;
+}
+
+.free-trial__apps {
+    width: fit-content;
+    display: flex;
+    gap: 40px;
+    margin: 0 auto;
+}
+
+
+@media screen and (max-width: 1440px) {
+    .free-trial__container {
+        margin: 0 32px;        
+    }    
+}
+
+@media screen and (max-width: 1152px) {
+
+}
+
+@media screen and (max-width: 768px) {
+    .free-trial__container {
+        justify-content: flex-start;
+        margin: 0 20px;
+    }
+
+    .free-trial__text-block h2 {
+        color: rgb(255, 255, 255);
+        font-family: Inter;
+        font-size: 54px;
+        font-weight: 700;
+        line-height: 62px;
+        letter-spacing: 0;
+        text-align: left;
+    }
+
+    .free-trial__text-block p {
+        color: rgb(255, 255, 255);
+        font-family: Inter;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 32px;
+        letter-spacing: -0.48px;
+        text-align: left;
+        margin: 0;
+    }
+
+    .free-trial__btn {
+        width: 241px;
+        height: 63px;
+        margin: 0;
+    }
+
+    .free-trial__btn span {
+        font-size: 18px;
+    }
+
+    .free-trial__link-contact-sales {
+        margin: 0;
+    }
+
+    .free-trial__apps {
+        margin: 0;
+    }
+} 
+
+@media screen and (max-width: 320px) {
+    .free-trial {
+        padding: 100px 0 32px 0;        
+    }    
+    .free-trial__container {
+        margin: 0 16px;
+    }
+
+    .free-trial__text-block h2 {
+        font-size: 40px;
+        line-height: 52px;
+    }
+
+    .free-trial__text-block p {
+        font-size: 18px;
+        line-height: 30px;
+    }
+
+    .free-trial__btn {
+        width: 225px;
+        height: 60px;        
+    }
+
+    .free-trial__btn span {
+        font-size: 16px;
+    }
+
+    .free-trial__link-contact-sales {
+        font-size: 18px;
+        line-height: 30px;
+        letter-spacing: -0.36px;
+    }
+
+    .free-trial__apps svg {
+        height: 36px;
+    }
+
+    .free-trial__apps svg:nth-of-type(1) {
+        width: 28.55px;
+    }
+
+    .free-trial__apps svg:nth-of-type(2) {
+        width: 35px;
+    }
+
+    .free-trial__apps svg:nth-of-type(3) {
+        width: 29.61px;
+    }
+}

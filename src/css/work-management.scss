@@ -1,0 +1,311 @@
+@import url(/src/css/fonts.css);
+@import url(/src/css/variables.css);
+
+
+
+// mixin for adaptive font-size
+@mixin calc-font-size($min-vw, $max-vw, $min-font-size, $max-font-size){
+    font-size: calc(#{$min-font-size}rem + ((100vw - #{$min-vw}rem) / (#{$max-vw} - #{$min-vw})) * (#{$max-font-size} - #{$min-font-size}));
+}
+
+//mixin for adaptive block width 
+@mixin calc-block-width($min-vw, $max-vw, $min-block-width, $max-block-width){
+    width: calc(#{$min-block-width}px + ((100vw - #{$min-vw}px) / (#{$max-vw} - #{$min-vw})) * (#{$max-block-width} - #{$min-block-width}));
+}
+
+//mixin for adaptive row margin
+@mixin calc-margin-row($min-vw, $max-vw, $min-margin-row, $max-margin-row){
+    margin: 0 calc(#{$min-margin-row}px + ((100vw - #{$min-vw}px) / (#{$max-vw} - #{$min-vw})) * (#{$max-margin-row} - #{$min-margin-row}));
+}
+
+
+.work-management-section {
+    background: var(--secondary-color-white);    
+    padding: 140px 0;
+}
+
+.work-management__container {
+    width: auto;
+    height: auto;
+    margin: 0 11.458333333vw;
+} 
+
+.work-management__content {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+.work-management__project-management {
+    width: 100%;
+    height: auto;
+    display: flex;
+    gap: 60px; 
+}
+
+.work-management__project-management-container-img {
+    @include calc-block-width(1152, 1920, 527.74, 748);
+    min-height: 547px;
+    background: var(--secondary-color-turquoise);
+}
+
+.work-management__project-management-container-img img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.work-management__heading-project-management {
+    width: 672px;
+    height: fit-content;
+    align-self: center;
+}
+
+.work-management__heading-project-management h2 {
+    width: 100%;
+    margin-bottom: 24px;
+    position: relative;
+    color: var(--secondary-color-black);
+    font-family: Inter;
+    @include calc-font-size(90, 120, 4.5, 4.5);
+    font-weight: 700;
+    line-height: 87px;
+    letter-spacing: -0.16px;
+}
+
+.work-management__heading-project-management h2::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url(/src/assets/pictures/);
+}
+
+.work-management__heading-project-management p {
+    width: 100%;
+    color: var(--secondary-color-black);
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: -0.16px;
+    margin-bottom: 60px;
+}
+
+.work-management__btn-project-management {
+    width: 201px;
+    height: 63px;
+    border: none;
+    border-radius: 6px;
+    background: var(--primary-color-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.work-management__btn-project-management span {
+    color: var(--secondary-color-white);
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 23px;
+    letter-spacing: -0.16px;
+}
+
+.work-management__work-together {
+    width: 100%;
+    height: auto;
+    display: flex;  
+    gap: 100px;
+}
+
+.work-management__work-together-container-img {
+    @include calc-block-width(1152, 1920, 528, 710);
+    max-height: 661px;
+   background: var(--secondary-color-turquoise);
+}
+
+.work-management__work-together-container-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.work-management__heading-work-together {
+    width: 670px;
+    height: fit-content;
+    align-self: center;
+}
+
+.work-management__heading-work-together h2 {
+    width: 100%;
+    color: var(--secondary-color-black);
+    font-family: Inter;
+    @include calc-font-size(90, 120, 4.5, 4.5);
+    font-weight: 700;
+    line-height: 87px;
+    letter-spacing: -0.16px;
+    margin-bottom: 24px;
+}
+
+.work-management__heading-work-together p {
+    width: 100%;
+    color: rgb(33, 37, 41);
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: -0.16px;
+    margin-bottom: 60px;
+}
+
+.work-management__btn-work-together {
+    width: 186px;
+    height: 63px;
+    border: none;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary-color-blue);
+    gap: 10px;
+}
+
+.work-management__btn-work-together span {
+    color: var(--secondary-color-white);
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 23px;
+    letter-spacing: -0.16px;
+}
+
+@media screen and (max-width: 1440px) {
+    .work-management__container {
+        margin: 0 2.222222222vw 0 2.222222222vw;
+    }
+    .work-management__project-management {
+        gap: 0px;
+    }
+    .work-management__heading-project-management {
+        width: 657px;
+        height: fit-content;
+    }
+    .work-management__heading-project-management h2 {
+        @include calc-font-size(72, 90, 4, 4.5);
+    }
+    .work-management__heading-work-together h2 {
+        @include calc-font-size(72, 90, 4, 4.5);
+    }
+    .work-management__project-management-container-img {
+        width: 719px;
+        min-height: 448px;
+    }
+    .work-management__work-together {
+        gap: 160px;
+    }
+}
+
+@media screen and (max-width: 1152px) {
+    .work-management__container {
+        margin: 0 2.777777778vw 0 2.777777778vw;
+    }
+    .work-management__project-management {
+        @include calc-block-width(768, 1152, 728, 1088);
+    }
+    .work-management__heading-project-management {
+        width: 528px;
+        height: 421px;
+    }
+    .work-management__heading-project-management h2 {
+        @include calc-font-size(48, 72, 3.375, 4);
+        line-height: 77px;
+    }
+    .work-management__heading-work-together h2 {
+        @include calc-font-size(48, 72, 3.375, 4);
+    }
+    .work-management__project-management-container-img {
+        width: 560px;
+        min-height: 384.2px;
+    }
+    .work-management__work-together {
+        gap: 33px;
+    }
+}
+
+@media screen and (max-width: 768px) {    
+    .work-management-section {
+        padding: 100px 0;
+    }
+    .work-management__container {
+        margin: 0 2.604166667vw 0 2.604166667vw;
+    }
+    .work-management__project-management {
+        width: 100%;
+        flex-direction: column;
+        gap: 60px;
+    }
+    .work-management__heading-project-management {
+        width: 100%;
+        height: fit-content;
+        text-align: center;
+    }
+    .work-management__heading-project-management h2 {
+        @include calc-font-size(20, 48, 2.25, 3.375);
+        text-align: center;
+        line-height: 65px;
+    }
+    .work-management__heading-project-management p {
+        text-align: center;
+        
+    }
+    .work-management__btn-project-management {
+        margin: 0 auto;
+    }
+    .work-management__project-management-container-img {
+        @include calc-block-width(320, 768, 286, 561);
+        margin: 0 auto;
+    }
+    .work-management__work-together {
+        flex-direction: column; 
+        gap: 60px;
+    }
+    .work-management__heading-work-together {
+        width: 100%;
+        order: 0;
+        text-align: center;
+    }
+    .work-management__btn-work-together {
+        margin: 0 auto;
+    }
+    .work-management__work-together-container-img {
+        @include calc-block-width(320, 768, 279, 454);
+        height: 422.67px;
+        order: 1;
+        margin: 0 auto
+    }   
+    .work-management__heading-work-together h2 {
+        @include calc-font-size(20, 48, 2.25, 3.375);
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .work-management-section {
+        padding: 80px 0;
+    }
+    .work-management__container {
+        margin: 0 5vw 0 5vw;
+    }
+
+    .work-management__heading-project-management h2 {
+        line-height: 44px;
+    }
+    .work-management__project-management-container-img {
+        min-height: 177px;
+    }
+}

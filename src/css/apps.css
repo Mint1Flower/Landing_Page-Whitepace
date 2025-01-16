@@ -1,0 +1,115 @@
+@import url(/src/css/fonts.css);
+@import url(/src/css/variables.css);
+.apps {
+  background: var(--primary-color-dark-blue);
+  padding: 140px 0;
+}
+
+.apps__container {
+  width: auto;
+  height: fit-content;
+  margin: 0 calc(32px + (100vw - 1440px) / (1920 - 1440) * (220 - 32));
+  display: flex;
+  gap: 100px;
+}
+
+.apps__container img {
+  width: 582px;
+  height: 470.7px;
+}
+
+.apps__text-content h2 {
+  width: 98%;
+  color: var(--secondary-color-white);
+  font-family: Inter;
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 87px;
+  letter-spacing: -0.16px;
+  margin-bottom: 24px;
+}
+
+.apps__text-content p {
+  color: var(--secondary-color-white);
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: -0.16px;
+  text-align: left;
+  margin-bottom: 60px;
+}
+
+.apps__btn {
+  width: 194px;
+  height: 63px;
+  border: none;
+  border-radius: 8px;
+  background: var(--primary-color-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.apps__btn span {
+  color: var(--secondary-color-white);
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 23px;
+  letter-spacing: -0.16px;
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 1440px) {
+  .apps__container {
+    margin: 0 32px;
+  }
+}
+@media screen and (max-width: 1080px) {
+  .apps__container {
+    flex-direction: column;
+  }
+  .apps__container img {
+    margin: 0 auto;
+  }
+  .apps__text-content h2 {
+    text-align: center;
+  }
+  .apps__text-content p {
+    text-align: center;
+  }
+  .apps__btn {
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 768px) {
+  .apps__container {
+    margin: 0 20px;
+  }
+  .apps__container img {
+    height: 51.084635417%;
+    width: calc(286.5px + (100vw - 320px) / (768 - 320) * (485 - 286.5));
+  }
+  .apps__text-content h2 {
+    font-size: calc(2.25rem + (100vw - 20rem) / (48 - 20) * (3.375 - 2.25));
+  }
+}
+@media screen and (max-width: 320px) {
+  .apps {
+    padding: 100px 0;
+  }
+  .apps__container {
+    margin: 0 16px;
+  }
+  .apps__container img {
+    width: 286.5px;
+    height: 231.76px;
+  }
+  .apps__text-content h2 {
+    font-size: 36px;
+    line-height: 44px;
+  }
+}
+
+/*# sourceMappingURL=apps.css.map */

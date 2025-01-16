@@ -1,0 +1,151 @@
+@import url(/src/css/fonts.css);
+@import url(/src/css/variables.css);
+
+
+// mixin for adaptive font-size
+@mixin calc-font-size($min-vw, $max-vw, $min-font-size, $max-font-size){
+    font-size: calc(#{$min-font-size}rem + ((100vw - #{$min-vw}rem) / (#{$max-vw} - #{$min-vw})) * (#{$max-font-size} - #{$min-font-size}));
+}
+
+//mixin for adaptive block width 
+@mixin calc-block-width($min-vw, $max-vw, $min-block-width, $max-block-width){
+    width: calc(#{$min-block-width}px + ((100vw - #{$min-vw}px) / (#{$max-vw} - #{$min-vw})) * (#{$max-block-width} - #{$min-block-width}));
+}
+
+//mixin for adaptive row margin
+@mixin calc-margin-row($min-vw, $max-vw, $min-margin-row, $max-margin-row){
+    margin: 0 calc(#{$min-margin-row}px + ((100vw - #{$min-vw}px) / (#{$max-vw} - #{$min-vw})) * (#{$max-margin-row} - #{$min-margin-row}));
+}
+
+
+.apps {
+    background: var(--primary-color-dark-blue);
+    padding: 140px 0;
+}
+
+.apps__container {
+    width: auto;
+    height: fit-content;
+    @include calc-margin-row(1440, 1920, 32, 220);
+    display: flex;
+    gap: 100px;
+}
+
+.apps__container img {
+    width: 582px;
+    height: 470.7px;
+}
+
+.apps__text-content {
+
+}
+
+.apps__text-content h2 {
+    width: 98%;
+    color: var(--secondary-color-white);
+    font-family: Inter;
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 87px;
+    letter-spacing: -0.16px;
+    margin-bottom: 24px;
+}
+
+.apps__text-content p {
+    color: var(--secondary-color-white);
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: -0.16px;
+    text-align: left;
+    margin-bottom: 60px;
+}
+
+.apps__btn {
+    width: 194px;
+    height: 63px;
+    border: none;
+    border-radius: 8px;
+    background: var(--primary-color-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.apps__btn span {
+    color: var(--secondary-color-white);
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 23px;
+    letter-spacing: -0.16px;
+    margin-right: 10px;
+}
+
+@media screen and (max-width: 1440px) {
+    .apps__container {
+        margin: 0 32px;
+    }
+}
+
+@media screen and (max-width: 1152px) {
+
+}
+
+@media screen and (max-width: 1080px) {
+    .apps__container {
+        flex-direction: column;
+    }    
+
+    .apps__container img {
+        margin: 0 auto;
+    }
+
+    .apps__text-content h2 {
+        text-align: center;
+    }
+
+    .apps__text-content p {
+        text-align: center;
+    }
+
+    .apps__btn {
+        margin: 0 auto;
+    }
+}
+ 
+@media screen and (max-width: 768px) {
+    .apps__container {
+        margin: 0 20px;
+    }
+
+    .apps__container img {
+        height: 51.084635417%;
+        @include calc-block-width(320, 768, 286.5, 485);
+    }
+
+    .apps__text-content h2 {
+        @include calc-font-size(20, 48, 2.25, 3.375);
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .apps {
+        padding: 100px 0;
+    }
+
+    .apps__container {
+        margin: 0 16px;
+    }
+
+    .apps__container img {
+        width: 286.5px;
+        height: 231.76px;
+    }
+
+    .apps__text-content h2 {
+        font-size: 36px;
+        line-height: 44px;
+    }
+}
